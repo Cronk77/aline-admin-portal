@@ -11,6 +11,7 @@ pipeline{
         }
         stage ('Install'){
             steps{
+                //similar to npm install but is used in automated enviroments like CI/CD
                 sh 'npm ci'
 //                sh 'npm i sonar-scanner --save-dev'
             }
@@ -38,9 +39,9 @@ pipeline{
             }
         }
     }
-//    post{
-//        always{
-//            archiveArtifacts artifacts: 'build/*/*', onlyIfSuccessful: true
-//        }
-//    }
+    post{
+        always{
+            archiveArtifacts artifacts: 'build/*/*', onlyIfSuccessful: true
+        }
+    }
 }
