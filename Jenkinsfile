@@ -9,17 +9,17 @@ pipeline{
                 checkout scm
             }
         }
-//        stage ('Install'){
-//            steps{
-//                sh 'npm install'
-//                sh 'npm i sonar-scanner --save-dev'
-//            }
-//        }
-//        stage("Test"){
-//            steps{
-//                sh "npm test"  
-//            }
-//       }
+        stage ('Install'){
+            steps{
+                sh 'npm install'
+                sh 'npm i sonar-scanner --save-dev'
+            }
+        }
+        stage("Test"){
+            steps{
+                sh "npm test"  
+            }
+       }
 //         stage('SonarQube Analysis') {
 //            steps{
 //                withSonarQubeEnv('aline-sonarqube-server') {
