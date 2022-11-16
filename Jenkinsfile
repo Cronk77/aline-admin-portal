@@ -11,7 +11,7 @@ pipeline{
         }
         stage ('Install'){
             steps{
-                sh 'npm install'
+                sh 'npm ci'
 //                sh 'npm i sonar-scanner --save-dev'
             }
         }
