@@ -32,11 +32,11 @@ pipeline{
 //                waitForQualityGate abortPipeline: true
 //            }
 //        }
-//        stage("Build"){
-//            steps{
-//                sh "npm run build"
-//            }
-//        }
+        stage("Build"){
+            steps{
+                sh "npm run build"
+            }
+        }
     }
 //    post{
 //        always{
