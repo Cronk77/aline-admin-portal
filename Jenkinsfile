@@ -12,7 +12,7 @@ pipeline{
         stage ('Install'){
             steps{
                 sh 'npm install'
-                sh 'npm i sonar-scanner --save-dev'
+//                sh 'npm i sonar-scanner --save-dev'
             }
         }
         stage("Test"){
